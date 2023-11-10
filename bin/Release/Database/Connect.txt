@@ -1,0 +1,1 @@
+User=BELA;Password=123;Database=D:\SourceCode\SafeControl\Database\safecontrol.fdb;Dialect=3;Charset=WIN1252;ServerType=Default;

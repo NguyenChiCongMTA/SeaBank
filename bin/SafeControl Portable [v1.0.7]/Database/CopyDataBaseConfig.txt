@@ -1,0 +1,3 @@
+SAFECONTROL.FDB
+C:\Program Files (x86)\SafeControl\data\
+D:\database\

@@ -1,0 +1,2 @@
+Thời gian	Mã hợp đồng	Người in	Loại hợp đồng
+30-3-2022 00:00:00	1	admin	1. Hợp đồng cho thuê tủ két an toàn cá nhân

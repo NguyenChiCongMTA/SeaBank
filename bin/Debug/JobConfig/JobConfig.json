@@ -1,0 +1,23 @@
+﻿{
+  "emailjobs": [
+    /*emailtime: Thời điểm gửi email hằng ngày*/
+    {
+      "emailtime": "16:28:00",
+      "emailtemplate": "Email đến hạn",
+      "hotline": "0123456",
+      "subject": "Test email"
+    }
+  ],
+  "smsjobs": [
+    {
+      /*smstime :  Thời điểm gửi sms*/
+      "smstime": "16:20:00",
+      "smstemplate": "Sms Hợp đồng đến hạn",
+      "hotline": "0123456"
+    }
+  ],
+  "refreshdatajob": "14:21:00",
+  /*han: Ngày hết hạn trong vòng  bao nhiêu ngày*/
+  "han": 1
+
+}

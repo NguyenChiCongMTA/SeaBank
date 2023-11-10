@@ -1,0 +1,1231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B28B440-9449-4E4D-B8A6-39A886697C2A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SafeControl</RootNamespace>
+    <AssemblyName>SafeControl</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\SafeControlDeploy\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>43F820BDBDDA74368105F6A525E55835EEFA4CFA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SafeControl_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>Libary\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>Libary\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX">
+      <HintPath>Libary\DevComponents.TreeGX.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v15.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v15.1.Drawing, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Charts.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1.UI, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1.Wizard, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPdfViewer.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.1.Extensions, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Libary\envdte.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.5.2.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Libary\Office12\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Libary\Office12\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libary\RestSharp\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=2.6.2.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>packages\Quartz.2.6.2\lib\net40\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=102.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libary\RestSharp\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\WinAPI_kernel32.cs" />
+    <Compile Include="Api\WinAPI_user32.cs" />
+    <Compile Include="app_object\Obj_ChiNhanh.cs" />
+    <Compile Include="app_object\Obj_HopDong.cs" />
+    <Compile Include="app_object\Obj_KhachHang.cs" />
+    <Compile Include="Base\Connect.cs" />
+    <Compile Include="Base\ConvertMoney.cs" />
+    <Compile Include="Base\fEncrypt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\fEncrypt.Designer.cs">
+      <DependentUpon>fEncrypt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bussiness\PersonPermission.cs" />
+    <Compile Include="Bussiness\PersonPermissionLog.cs" />
+    <Compile Include="Bussiness\PersonHistory.cs" />
+    <Compile Include="Bussiness\PersonHistoryLog.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsToFirebase.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsToFirebase_body.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsToFirebase_body_utility.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsToFirebase_header.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByBatch_body_utility_paramlist_batch.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByBatch.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByBatch_body.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByBatch_body_utility.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByBatch_body_utility_paramlist.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByBatch_header.cs" />
+    <Compile Include="Classes\JobConfig\JobConfig.cs" />
+    <Compile Include="Classes\JobConfig\EmailJobItem.cs" />
+    <Compile Include="Classes\JobConfig\SmsJobItem.cs" />
+    <Compile Include="Classes\NotificationSystem.cs" />
+    <Compile Include="Classes\SmsNotifierFactory.cs" />
+    <Compile Include="Classes\EmailNotifierFactory.cs" />
+    <Compile Include="Classes\INotifierFactory.cs" />
+    <Compile Include="Classes\SmsNotifier.cs" />
+    <Compile Include="Classes\EmailNotifier.cs" />
+    <Compile Include="Classes\INotifier.cs" />
+    <Compile Include="Constants\FilePathConstant.cs" />
+    <Compile Include="f7QuanLy_PersonPermissionLogDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f7QuanLy_PersonPermissionLogDialog.Designer.cs">
+      <DependentUpon>f7QuanLy_PersonPermissionLogDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f7QuanLy_PersonPermissionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f7QuanLy_PersonPermissionDialog.Designer.cs">
+      <DependentUpon>f7QuanLy_PersonPermissionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\MEncypt.cs" />
+    <Compile Include="f8SendAPI_HistoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI_HistoryDialog.Designer.cs">
+      <DependentUpon>f8SendAPI_HistoryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI_SmsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI_SmsDialog.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI_EmailDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI_EmailDialog.Designer.cs">
+      <DependentUpon>f8SendAPI_EmailDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI_Email_FileAttachDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI_Email_FileAttachDialog.Designer.cs">
+      <DependentUpon>f8SendAPI_Email_FileAttachDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f9LietKeGiaoDich_ReportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f9LietKeGiaoDich_ReportDialog.Designer.cs">
+      <DependentUpon>f9LietKeGiaoDich_ReportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f9LietKeGiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f9LietKeGiaoDich.Designer.cs">
+      <DependentUpon>f9LietKeGiaoDich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionary\MColor.cs" />
+    <Compile Include="Dictionary\MConfig.cs" />
+    <Compile Include="Dictionary\MDatalayer.cs" />
+    <Compile Include="Dictionary\MDateTime.cs" />
+    <Compile Include="Dictionary\MEnumExtention.cs" />
+    <Compile Include="Dictionary\MExcel.cs" />
+    <Compile Include="Dictionary\MExtraction.cs" />
+    <Compile Include="Dictionary\MFile.cs" />
+    <Compile Include="Dictionary\MFileBase64.cs" />
+    <Compile Include="Dictionary\MFileEx.cs" />
+    <Compile Include="Dictionary\MFtp.cs" />
+    <Compile Include="Dictionary\MGlobal.cs" />
+    <Compile Include="Dictionary\MImage.cs" />
+    <Compile Include="Dictionary\MMessageBox.cs" />
+    <Compile Include="Dictionary\MNetworkInterface.cs" />
+    <Compile Include="Dictionary\MProcess.cs" />
+    <Compile Include="Dictionary\MString.cs" />
+    <Compile Include="Dictionary\MTreeNode.cs" />
+    <Compile Include="Dictionary\MXml.cs" />
+    <Compile Include="f8SendAPI_ReportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI_ReportDialog.Designer.cs">
+      <DependentUpon>f8SendAPI_ReportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsToFirebase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsToFirebase.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsToFirebase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsToFirebase_body.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsToFirebase_body.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsToFirebase_body.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsToFirebase_header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsToFirebase_header.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsToFirebase_header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByBatch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByBatch.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsByBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByBatch_body.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByBatch_body.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsByBatch_body.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByBatch_bodyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByBatch_bodyDialog.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsByBatch_bodyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByBatch_header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByBatch_header.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsByBatch_header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByTemplate_bodyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByTemplate_bodyDialog.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsByTemplate_bodyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\MBaseJson.cs" />
+    <Compile Include="Base\MBaseFirebird.cs" />
+    <Compile Include="Base\fBaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\fBaseDialog.Designer.cs">
+      <DependentUpon>fBaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\fBaseProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\fBaseProcess.Designer.cs">
+      <DependentUpon>fBaseProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\fConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\fConnect.Designer.cs">
+      <DependentUpon>fConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\InWord.cs" />
+    <Compile Include="Base\MBase.cs" />
+    <Compile Include="Base\MCopyData.cs" />
+    <Compile Include="Base\uBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\uBase.Designer.cs">
+      <DependentUpon>uBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bussiness\SendAPI_SmsByTemplate_body_utility_paramlist_body_param.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByTemplate_body_utility_paramlist_body_param_param.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByTemplate.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByTemplate_body.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByTemplate_body_utility.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByTemplate_body_utility_paramlist.cs" />
+    <Compile Include="Bussiness\SendAPI_SmsByTemplate_header.cs" />
+    <Compile Include="Bussiness\SendAPI_Sms_1_body_utility_paramlist.cs" />
+    <Compile Include="Bussiness\SendAPI_Sms_1.cs" />
+    <Compile Include="Bussiness\SendAPI_Sms_1_body.cs" />
+    <Compile Include="Bussiness\SendAPI_Sms_1_body_utility.cs" />
+    <Compile Include="Bussiness\SendAPI_Sms_1_header.cs" />
+    <Compile Include="Bussiness\SendAPI_Sms.cs" />
+    <Compile Include="Bussiness\SendAPI_Sms_body_utility.cs" />
+    <Compile Include="Bussiness\SendAPI_Sms_body.cs" />
+    <Compile Include="Bussiness\SendAPI_Sms_header.cs" />
+    <Compile Include="Bussiness\SendAPI_Email.cs" />
+    <Compile Include="Bussiness\SendAPI_Email_header.cs" />
+    <Compile Include="Bussiness\SendAPI_Email_security.cs" />
+    <Compile Include="Bussiness\SendAPI_Email_body_utility_paramlist_file_attachment_file.cs" />
+    <Compile Include="Bussiness\SendAPI_Email_body_utility_paramlist_file_attachment.cs" />
+    <Compile Include="Bussiness\SendAPI_Email_body_utility_paramlist.cs" />
+    <Compile Include="Bussiness\SendAPI_Email_body_utility.cs" />
+    <Compile Include="Bussiness\SendAPI_Email_body.cs" />
+    <Compile Include="f8SendAPI\f8SendAPI_Email_bodyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Email_bodyDialog.Designer.cs">
+      <DependentUpon>f8SendAPI_Email_bodyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByTemplate.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsByTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByTemplate_body.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByTemplate_body.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsByTemplate_body.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByTemplate_header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_SmsByTemplate_header.Designer.cs">
+      <DependentUpon>f8SendAPI_SmsByTemplate_header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms_1.Designer.cs">
+      <DependentUpon>f8SendAPI_Sms_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms_1_body.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms_1_body.Designer.cs">
+      <DependentUpon>f8SendAPI_Sms_1_body.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms_1_header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms_1_header.Designer.cs">
+      <DependentUpon>f8SendAPI_Sms_1_header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Email_security.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Email_security.Designer.cs">
+      <DependentUpon>f8SendAPI_Email_security.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms.Designer.cs">
+      <DependentUpon>f8SendAPI_Sms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms_body.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms_body.Designer.cs">
+      <DependentUpon>f8SendAPI_Sms_body.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms_header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Sms_header.Designer.cs">
+      <DependentUpon>f8SendAPI_Sms_header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Email_body.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Email_body.Designer.cs">
+      <DependentUpon>f8SendAPI_Email_body.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Email_header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Email_header.Designer.cs">
+      <DependentUpon>f8SendAPI_Email_header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI.Designer.cs">
+      <DependentUpon>f8SendAPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnumConvert\LocalizedEnumConverter.cs" />
+    <Compile Include="EnumConvert\ResourceEnumConverter.cs" />
+    <Compile Include="Enum\EnumResources.cs" />
+    <Compile Include="f3BaoCaoDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f3BaoCaoDoanhThu.Designer.cs">
+      <DependentUpon>f3BaoCaoDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f5BaoCaoHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f5BaoCaoHopDong.Designer.cs">
+      <DependentUpon>f5BaoCaoHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f4BaoCaoTiLeSuDungKet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f4BaoCaoTiLeSuDungKet.Designer.cs">
+      <DependentUpon>f4BaoCaoTiLeSuDungKet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f0HomeLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f0HomeLogin.Designer.cs">
+      <DependentUpon>f0HomeLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f2InHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f2InHopDong.Designer.cs">
+      <DependentUpon>f2InHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f6TuDongBaoGiaHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f6TuDongBaoGiaHan.Designer.cs">
+      <DependentUpon>f6TuDongBaoGiaHan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f7QuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f7QuanLy.Designer.cs">
+      <DependentUpon>f7QuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Email.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f8SendAPI\f8SendAPI_Email.Designer.cs">
+      <DependentUpon>f8SendAPI_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUpdateVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUpdateVersion.Designer.cs">
+      <DependentUpon>fUpdateVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jobs\RefreshDataJob.cs" />
+    <Compile Include="Jobs\SendSmsJob.cs" />
+    <Compile Include="Jobs\SendEmailJob.cs" />
+    <Compile Include="MComponent\MSimpleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MSimpleButton.Designer.cs">
+      <DependentUpon>MSimpleButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MBindingNavigator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MBindingNavigator.Designer.cs">
+      <DependentUpon>MBindingNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MBindingSource.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MBindingSource.Designer.cs">
+      <DependentUpon>MBindingSource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MButton.Designer.cs">
+      <DependentUpon>MButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MChart.Designer.cs">
+      <DependentUpon>MChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MChartControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MChartControl.Designer.cs">
+      <DependentUpon>MChartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MCheckBox.Designer.cs">
+      <DependentUpon>MCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MCircularProgress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MCircularProgress.Designer.cs">
+      <DependentUpon>MCircularProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MColorDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MColorDialog.Designer.cs">
+      <DependentUpon>MColorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MComboBox.Designer.cs">
+      <DependentUpon>MComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MComboTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MComboTree.Designer.cs">
+      <DependentUpon>MComboTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MContextMenuStrip.Designer.cs">
+      <DependentUpon>MContextMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MDataGridView.Designer.cs">
+      <DependentUpon>MDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MDateEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MDateEdit.Designer.cs">
+      <DependentUpon>MDateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MDropDownButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MDropDownButton.Designer.cs">
+      <DependentUpon>MDropDownButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MExpandablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MExpandablePanel.Designer.cs">
+      <DependentUpon>MExpandablePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MExpandableSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MExpandableSplitter.Designer.cs">
+      <DependentUpon>MExpandableSplitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MFlowLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MFlowLayoutPanel.Designer.cs">
+      <DependentUpon>MFlowLayoutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MGridControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MComponent\MGridControl.Designer.cs">
+      <DependentUpon>MGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MGroupBox.Designer.cs">
+      <DependentUpon>MGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MLinkLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MLinkLabel.Designer.cs">
+      <DependentUpon>MLinkLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MListBox.Designer.cs">
+      <DependentUpon>MListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MListView.Designer.cs">
+      <DependentUpon>MListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MMemoEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MMemoEdit.Designer.cs">
+      <DependentUpon>MMemoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MMenuStrip.Designer.cs">
+      <DependentUpon>MMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MMicroChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MMicroChart.Designer.cs">
+      <DependentUpon>MMicroChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MNavBarControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MNavBarControl.Designer.cs">
+      <DependentUpon>MNavBarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MNumericUpDown.Designer.cs">
+      <DependentUpon>MNumericUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MPdfViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MComponent\MPdfViewer.Designer.cs">
+      <DependentUpon>MPdfViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MPictureBox.Designer.cs">
+      <DependentUpon>MPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MPopupMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MPopupMenu.Designer.cs">
+      <DependentUpon>MPopupMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MRadioButton.Designer.cs">
+      <DependentUpon>MRadioButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MRichEditControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MRichEditControl.Designer.cs">
+      <DependentUpon>MRichEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MRichTextBox.Designer.cs">
+      <DependentUpon>MRichTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MSparklineEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MSparklineEdit.Designer.cs">
+      <DependentUpon>MSparklineEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MSplitContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MSplitContainer.Designer.cs">
+      <DependentUpon>MSplitContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MTabControl.Designer.cs">
+      <DependentUpon>MTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MTableLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MTableLayoutPanel.Designer.cs">
+      <DependentUpon>MTableLayoutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MTextBox.Designer.cs">
+      <DependentUpon>MTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MLabel.Designer.cs">
+      <DependentUpon>MLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MLabelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MLabelControl.Designer.cs">
+      <DependentUpon>MLabelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MPanel.Designer.cs">
+      <DependentUpon>MPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\fBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\fBase.Designer.cs">
+      <DependentUpon>fBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f1MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f1MainMenu.Designer.cs">
+      <DependentUpon>f1MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MTextEdit.Designer.cs">
+      <DependentUpon>MTextEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MTimer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MTimer.Designer.cs">
+      <DependentUpon>MTimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MToolStrip.Designer.cs">
+      <DependentUpon>MToolStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MTreeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MComponent\MTreeList.Designer.cs">
+      <DependentUpon>MTreeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MTreeListLookUpEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MComponent\MTreeListLookUpEdit.Designer.cs">
+      <DependentUpon>MTreeListLookUpEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MComponent\MTreeView.Designer.cs">
+      <DependentUpon>MTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MUCBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MComponent\MUCBase.Designer.cs">
+      <DependentUpon>MUCBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MComponent\MWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MComponent\MWaitForm.Designer.cs">
+      <DependentUpon>MWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app_object\Obj_LoaiBox.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\EnumResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnumResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Utilities.cs" />
+    <EmbeddedResource Include="Base\fBaseDialog.resx">
+      <DependentUpon>fBaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\fBaseProcess.resx">
+      <DependentUpon>fBaseProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\fBase.resx">
+      <DependentUpon>fBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\fConnect.resx">
+      <DependentUpon>fConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\fEncrypt.resx">
+      <DependentUpon>fEncrypt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f7QuanLy_PersonPermissionLogDialog.resx">
+      <DependentUpon>f7QuanLy_PersonPermissionLogDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f7QuanLy_PersonPermissionDialog.resx">
+      <DependentUpon>f7QuanLy_PersonPermissionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI_HistoryDialog.resx">
+      <DependentUpon>f8SendAPI_HistoryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI_SmsDialog.resx">
+      <DependentUpon>f8SendAPI_SmsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI_EmailDialog.resx">
+      <DependentUpon>f8SendAPI_EmailDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI_Email_FileAttachDialog.resx">
+      <DependentUpon>f8SendAPI_Email_FileAttachDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f9LietKeGiaoDich_ReportDialog.resx">
+      <DependentUpon>f9LietKeGiaoDich_ReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f9LietKeGiaoDich.resx">
+      <DependentUpon>f9LietKeGiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI_ReportDialog.resx">
+      <DependentUpon>f8SendAPI_ReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_SmsToFirebase.resx">
+      <DependentUpon>f8SendAPI_SmsToFirebase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_SmsToFirebase_body.resx">
+      <DependentUpon>f8SendAPI_SmsToFirebase_body.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_SmsToFirebase_header.resx">
+      <DependentUpon>f8SendAPI_SmsToFirebase_header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_SmsByBatch.resx">
+      <DependentUpon>f8SendAPI_SmsByBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_SmsByBatch_body.resx">
+      <DependentUpon>f8SendAPI_SmsByBatch_body.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_SmsByBatch_bodyDialog.resx">
+      <DependentUpon>f8SendAPI_SmsByBatch_bodyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_SmsByBatch_header.resx">
+      <DependentUpon>f8SendAPI_SmsByBatch_header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_SmsByTemplate_bodyDialog.resx">
+      <DependentUpon>f8SendAPI_SmsByTemplate_bodyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_Email_bodyDialog.resx">
+      <DependentUpon>f8SendAPI_Email_bodyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_SmsByTemplate.resx">
+      <DependentUpon>f8SendAPI_SmsByTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_SmsByTemplate_body.resx">
+      <DependentUpon>f8SendAPI_SmsByTemplate_body.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_SmsByTemplate_header.resx">
+      <DependentUpon>f8SendAPI_SmsByTemplate_header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_Sms_1.resx">
+      <DependentUpon>f8SendAPI_Sms_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_Sms_1_body.resx">
+      <DependentUpon>f8SendAPI_Sms_1_body.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_Sms_1_header.resx">
+      <DependentUpon>f8SendAPI_Sms_1_header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_Email_security.resx">
+      <DependentUpon>f8SendAPI_Email_security.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_Sms.resx">
+      <DependentUpon>f8SendAPI_Sms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_Sms_body.resx">
+      <DependentUpon>f8SendAPI_Sms_body.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_Sms_header.resx">
+      <DependentUpon>f8SendAPI_Sms_header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_Email_body.resx">
+      <DependentUpon>f8SendAPI_Email_body.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI.resx">
+      <DependentUpon>f8SendAPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f0HomeLogin.resx">
+      <DependentUpon>f0HomeLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f2InHopDong.resx">
+      <DependentUpon>f2InHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f1MainMenu.resx">
+      <DependentUpon>f1MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f3BaoCaoDoanhThu.resx">
+      <DependentUpon>f3BaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f4BaoCaoTiLeSuDungKet.resx">
+      <DependentUpon>f4BaoCaoTiLeSuDungKet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f5BaoCaoHopDong.resx">
+      <DependentUpon>f5BaoCaoHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f6TuDongBaoGiaHan.resx">
+      <DependentUpon>f6TuDongBaoGiaHan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f7QuanLy.resx">
+      <DependentUpon>f7QuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_Email.resx">
+      <DependentUpon>f8SendAPI_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f8SendAPI\f8SendAPI_Email_header.resx">
+      <DependentUpon>f8SendAPI_Email_header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUpdateVersion.resx">
+      <DependentUpon>fUpdateVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MBindingNavigator.resx">
+      <DependentUpon>MBindingNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MBindingSource.resx">
+      <DependentUpon>MBindingSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MButton.resx">
+      <DependentUpon>MButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MChart.resx">
+      <DependentUpon>MChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MChartControl.resx">
+      <DependentUpon>MChartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MCheckBox.resx">
+      <DependentUpon>MCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MColorDialog.resx">
+      <DependentUpon>MColorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MComboBox.resx">
+      <DependentUpon>MComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MComboTree.resx">
+      <DependentUpon>MComboTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MDataGridView.resx">
+      <DependentUpon>MDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MDateEdit.resx">
+      <DependentUpon>MDateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MDropDownButton.resx">
+      <DependentUpon>MDropDownButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MExpandablePanel.resx">
+      <DependentUpon>MExpandablePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MGridControl.resx">
+      <DependentUpon>MGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MGroupBox.resx">
+      <DependentUpon>MGroupBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MLabelControl.resx">
+      <DependentUpon>MLabelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MLinkLabel.resx">
+      <DependentUpon>MLinkLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MListBox.resx">
+      <DependentUpon>MListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MListView.resx">
+      <DependentUpon>MListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MMemoEdit.resx">
+      <DependentUpon>MMemoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MMicroChart.resx">
+      <DependentUpon>MMicroChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MNavBarControl.resx">
+      <DependentUpon>MNavBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MNumericUpDown.resx">
+      <DependentUpon>MNumericUpDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MPdfViewer.resx">
+      <DependentUpon>MPdfViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MPictureBox.resx">
+      <DependentUpon>MPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MPopupMenu.resx">
+      <DependentUpon>MPopupMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MRadioButton.resx">
+      <DependentUpon>MRadioButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MRichTextBox.resx">
+      <DependentUpon>MRichTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MSparklineEdit.resx">
+      <DependentUpon>MSparklineEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MTabControl.resx">
+      <DependentUpon>MTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MTimer.resx">
+      <DependentUpon>MTimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MTreeList.resx">
+      <DependentUpon>MTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MTreeListLookUpEdit.resx">
+      <DependentUpon>MTreeListLookUpEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MTreeView.resx">
+      <DependentUpon>MTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MUCBase.resx">
+      <DependentUpon>MUCBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MComponent\MWaitForm.resx">
+      <DependentUpon>MWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resources\EnumResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EnumResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="JobConfig\JobConfig.json" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SafeControl_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Templates\Emails\Email phát hành.txt" />
+    <Content Include="Templates\Emails\Email gia hạn KHCN.txt" />
+    <Content Include="Templates\Emails\Email gia hạn KHDN.txt" />
+    <Content Include="Templates\Emails\Email đến hạn.txt" />
+    <Content Include="Templates\Sms\Sms Hợp đồng đến hạn.txt" />
+    <None Include="Image\search_mini.png" />
+    <Content Include="Resources\apply_16x16.png" />
+    <Content Include="Resources\grid_dot.png" />
+    <None Include="Resources\SMS-bubble-icon.png" />
+    <None Include="Resources\Mail-icon.png" />
+    <Content Include="Resources\pagenext_16x16.png" />
+    <Content Include="Resources\pageprev_16x16.png" />
+    <Content Include="Resources\page_white_edit.png" />
+    <Content Include="Resources\RadialChartHS.png" />
+    <Content Include="Resources\refresh2_16x16.png" />
+    <Content Include="Resources\saveto_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>Xcopy $(ProjectDir)Templates $(ProjectDir)$(OutDir)Templates /E /Y
+Xcopy $(ProjectDir)JobConfig $(ProjectDir)$(OutDir)JobConfig /E /Y
+
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

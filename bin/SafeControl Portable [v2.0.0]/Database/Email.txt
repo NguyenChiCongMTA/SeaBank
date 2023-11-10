@@ -1,0 +1,7 @@
+SendMail
+1s5ZidrDWYSb8al89VARtrAQ
+http://10.9.60.176:1105/ApiFrame.svc/api/json
+POST
+Application/Json
+1105
+10.9.60.176 

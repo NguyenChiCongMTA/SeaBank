@@ -1,0 +1,44 @@
+{
+  "PersonPermissionLog": [
+    {
+      "sControlName": "f1MainMenu",
+      "sPersonPermission": "admin,user 1",
+      "sNote": "Menu chính"
+    },
+    {
+      "sControlName": "f0HomeLogin",
+      "sPersonPermission": "admin",
+      "sNote": "Đăng nhập"
+    },
+    {
+      "sControlName": "f2InHopDong",
+      "sPersonPermission": "admin",
+      "sNote": "In các loại hợp đồng"
+    },
+    {
+      "sControlName": "f4BaoCaoTiLeSuDungKet",
+      "sPersonPermission": "admin",
+      "sNote": "Báo cáo tỉ lệ sự dụng két"
+    },
+    {
+      "sControlName": "f5BaoCaoHopDong",
+      "sPersonPermission": "admin",
+      "sNote": "Báo cáo tình hình hợp đồng"
+    },
+    {
+      "sControlName": "f7QuanLy",
+      "sPersonPermission": "admin",
+      "sNote": "Quản lý tài khoản"
+    },
+    {
+      "sControlName": "f8SendAPI",
+      "sPersonPermission": "admin",
+      "sNote": "Gửi Email, SMS và két sắt đến hạn"
+    },
+    {
+      "sControlName": "f9LietKeGiaoDich",
+      "sPersonPermission": "admin",
+      "sNote": "Liệt kê giao dịch"
+    }
+  ]
+}

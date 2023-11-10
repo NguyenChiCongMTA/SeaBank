@@ -1,0 +1,23 @@
+{
+  "personid": "53",
+  "PersonHistoryLog": [
+    {
+      "dCreate": "2022-03-26T00:40:11.6694526+07:00",
+      "sUserWrite": "Nguyễn Văn A",
+      "sType": "Email",
+      "sContext": "Chủ đề: Email_Active_HopDong\nNội dung:\nThông báo phát hành hợp đồng cho thuê tủ két an toàn\nKính gửi quý khách : DAO THI QUYNH.\nSeabank xin trân trọng thông báo, Hợp đồng cho thuê tủ két an toàn số 80. của Quý khách đã được phát hành thành công tại Seabank VA210331.\nCảm ơn Quý khách đã tin tưởng và sử dụng dịch vụ của Seabank!\nNếu cần hỗ trợ thông tin hoặc tư vấn về hợp đồng, Quý khách vui lòng liên hệ Đơn vị phát hành hợp đồng hoặc gọi số hotline 0123456789\nTrân trọng !\n                    "
+    },
+    {
+      "dCreate": "2022-03-26T21:49:53.2484165+07:00",
+      "sUserWrite": "Nguyễn Văn A",
+      "sType": "Sms",
+      "sContext": "Số điện thoại: 0989932221\nNội dung:\nHợp đồng cho thuê tủ két an toàn số 80 của Quý Khách hàng đã được phát hành ngày 17/01/2022 Trân trọng cảm ơn Qúy Khách đã sử dụng dịch vụ của SeAbank!"
+    },
+    {
+      "dCreate": "2022-03-26T22:08:26.4876981+07:00",
+      "sUserWrite": "Nguyễn Văn A",
+      "sType": "Sms",
+      "sContext": "Số điện thoại: 0964568212\nNội dung:\nHợp đồng cho thuê tủ két an toàn số 80 của Quý Khách hàng đã được phát hành ngày 17/01/2022 Trân trọng cảm ơn Qúy Khách đã sử dụng dịch vụ của SeAbank!"
+    }
+  ]
+}

@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="iChuyenHuong_ADMIN" xml:space="preserve">
+    <value>Quản trị</value>
+  </data>
+  <data name="iChuyenHuong_NGUOIDUNG" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="iDanhDau_CharSpecial1" xml:space="preserve">
+    <value>Kí tự (Loại 1)</value>
+  </data>
+  <data name="iDanhDau_Dictionary" xml:space="preserve">
+    <value>Từ điển</value>
+  </data>
+  <data name="iDanhDau_Number" xml:space="preserve">
+    <value>Số</value>
+  </data>
+  <data name="iIDDocumentType_CAHAILOAI" xml:space="preserve">
+    <value>Cả 2 loại</value>
+  </data>
+  <data name="iIDDocumentType_GIAY" xml:space="preserve">
+    <value>Giấy</value>
+  </data>
+  <data name="iIDDocumentType_TAILIEUSO" xml:space="preserve">
+    <value>Tài liệu số</value>
+  </data>
+  <data name="iLanguage_EN" xml:space="preserve">
+    <value>en-English</value>
+  </data>
+  <data name="iLanguage_FR" xml:space="preserve">
+    <value>fr-French</value>
+  </data>
+  <data name="iLanguage_RU" xml:space="preserve">
+    <value>ru-Russia</value>
+  </data>
+  <data name="iLanguage_TH" xml:space="preserve">
+    <value>th-Thái</value>
+  </data>
+  <data name="iLanguage_VI" xml:space="preserve">
+    <value>vi-Việt Nam</value>
+  </data>
+  <data name="iMapType_BingMapSatellite" xml:space="preserve">
+    <value>Bing Map Satellite</value>
+  </data>
+  <data name="iMapType_GoogleMap" xml:space="preserve">
+    <value>Google Map</value>
+  </data>
+  <data name="iMapType_GoogleMapMaker" xml:space="preserve">
+    <value>Google Map Maker</value>
+  </data>
+  <data name="iMapType_GoogleSatellite" xml:space="preserve">
+    <value>Google Satellite</value>
+  </data>
+  <data name="iPhanLoaiDeTaiKhoaHoc_CHUYENDE" xml:space="preserve">
+    <value>Chuyên đề</value>
+  </data>
+  <data name="iPhanLoaiDeTaiKhoaHoc_DETAI" xml:space="preserve">
+    <value>Đề tài</value>
+  </data>
+  <data name="iPhanLoaiDeTaiKhoaHoc_KEHOACH" xml:space="preserve">
+    <value>Kế hoạch</value>
+  </data>
+  <data name="iPhanLoaiDeTaiKhoaHoc_KHAC" xml:space="preserve">
+    <value>Khác</value>
+  </data>
+  <data name="iSort_Ascending" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="iSort_Descending" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="iSort_NoSort" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Nam_Nam2000" xml:space="preserve">
+    <value>Năm 2000</value>
+  </data>
+  <data name="Nam_Nam2001" xml:space="preserve">
+    <value>Năm 2001</value>
+  </data>
+  <data name="Nam_Nam2002" xml:space="preserve">
+    <value>Năm 2002</value>
+  </data>
+  <data name="Nam_Nam2003" xml:space="preserve">
+    <value>Năm 2003</value>
+  </data>
+  <data name="Nam_Nam2004" xml:space="preserve">
+    <value>Năm 2004</value>
+  </data>
+  <data name="Nam_Nam2005" xml:space="preserve">
+    <value>Năm 2005</value>
+  </data>
+  <data name="Nam_Nam2006" xml:space="preserve">
+    <value>Năm 2006</value>
+  </data>
+  <data name="Nam_Nam2007" xml:space="preserve">
+    <value>Năm 2007</value>
+  </data>
+  <data name="Nam_Nam2008" xml:space="preserve">
+    <value>Năm 2008</value>
+  </data>
+  <data name="Nam_Nam2009" xml:space="preserve">
+    <value>Năm 2009</value>
+  </data>
+  <data name="Nam_Nam2010" xml:space="preserve">
+    <value>Năm 2010</value>
+  </data>
+  <data name="Nam_Nam2011" xml:space="preserve">
+    <value>Năm 2011</value>
+  </data>
+  <data name="Nam_Nam2012" xml:space="preserve">
+    <value>Năm 2012</value>
+  </data>
+  <data name="Nam_Nam2013" xml:space="preserve">
+    <value>Năm 2013</value>
+  </data>
+  <data name="Nam_Nam2014" xml:space="preserve">
+    <value>Năm 2014</value>
+  </data>
+  <data name="Nam_Nam2015" xml:space="preserve">
+    <value>Năm 2015</value>
+  </data>
+  <data name="Nam_Nam2016" xml:space="preserve">
+    <value>Năm 2016</value>
+  </data>
+  <data name="Nam_Nam2017" xml:space="preserve">
+    <value>Năm 2017</value>
+  </data>
+  <data name="Nam_Nam2018" xml:space="preserve">
+    <value>Năm 2018</value>
+  </data>
+  <data name="Nam_Nam2019" xml:space="preserve">
+    <value>Năm 2019</value>
+  </data>
+  <data name="Nam_Nam2020" xml:space="preserve">
+    <value>Năm 2020</value>
+  </data>
+  <data name="Nam_Nam2021" xml:space="preserve">
+    <value>Năm 2021</value>
+  </data>
+  <data name="Nam_Nam2022" xml:space="preserve">
+    <value>Năm 2022</value>
+  </data>
+  <data name="Nam_Nam2023" xml:space="preserve">
+    <value>Năm 2023</value>
+  </data>
+  <data name="Nam_Nam2024" xml:space="preserve">
+    <value>Năm 2024</value>
+  </data>
+  <data name="Nam_Nam2025" xml:space="preserve">
+    <value>Năm 2025</value>
+  </data>
+  <data name="Nam_Nam2026" xml:space="preserve">
+    <value>Năm 2026</value>
+  </data>
+  <data name="Nam_Nam2027" xml:space="preserve">
+    <value>Năm 2027</value>
+  </data>
+  <data name="Nam_Nam2028" xml:space="preserve">
+    <value>Năm 2028</value>
+  </data>
+  <data name="Nam_Nam2029" xml:space="preserve">
+    <value>Năm 2029</value>
+  </data>
+  <data name="Nam_Nam2030" xml:space="preserve">
+    <value>Năm 2030</value>
+  </data>
+  <data name="Ngay_Ngay1" xml:space="preserve">
+    <value>Ngày 1</value>
+  </data>
+  <data name="Ngay_Ngay10" xml:space="preserve">
+    <value>Ngày 10</value>
+  </data>
+  <data name="Ngay_Ngay11" xml:space="preserve">
+    <value>Ngày 11</value>
+  </data>
+  <data name="Ngay_Ngay12" xml:space="preserve">
+    <value>Ngày 12</value>
+  </data>
+  <data name="Ngay_Ngay13" xml:space="preserve">
+    <value>Ngày 13</value>
+  </data>
+  <data name="Ngay_Ngay14" xml:space="preserve">
+    <value>Ngày 14</value>
+  </data>
+  <data name="Ngay_Ngay15" xml:space="preserve">
+    <value>Ngày 15</value>
+  </data>
+  <data name="Ngay_Ngay16" xml:space="preserve">
+    <value>Ngày 16</value>
+  </data>
+  <data name="Ngay_Ngay17" xml:space="preserve">
+    <value>Ngày 17</value>
+  </data>
+  <data name="Ngay_Ngay18" xml:space="preserve">
+    <value>Ngày 18</value>
+  </data>
+  <data name="Ngay_Ngay19" xml:space="preserve">
+    <value>Ngày 19</value>
+  </data>
+  <data name="Ngay_Ngay2" xml:space="preserve">
+    <value>Ngày 2</value>
+  </data>
+  <data name="Ngay_Ngay20" xml:space="preserve">
+    <value>Ngày 20</value>
+  </data>
+  <data name="Ngay_Ngay21" xml:space="preserve">
+    <value>Ngày 21</value>
+  </data>
+  <data name="Ngay_Ngay22" xml:space="preserve">
+    <value>Ngày 22</value>
+  </data>
+  <data name="Ngay_Ngay23" xml:space="preserve">
+    <value>Ngày 23</value>
+  </data>
+  <data name="Ngay_Ngay24" xml:space="preserve">
+    <value>Ngày 24</value>
+  </data>
+  <data name="Ngay_Ngay25" xml:space="preserve">
+    <value>Ngày 25</value>
+  </data>
+  <data name="Ngay_Ngay26" xml:space="preserve">
+    <value>Ngày 26</value>
+  </data>
+  <data name="Ngay_Ngay27" xml:space="preserve">
+    <value>Ngày 27</value>
+  </data>
+  <data name="Ngay_Ngay28" xml:space="preserve">
+    <value>Ngày 28</value>
+  </data>
+  <data name="Ngay_Ngay29" xml:space="preserve">
+    <value>Ngày 29</value>
+  </data>
+  <data name="Ngay_Ngay3" xml:space="preserve">
+    <value>Ngày 3</value>
+  </data>
+  <data name="Ngay_Ngay30" xml:space="preserve">
+    <value>Ngày 30</value>
+  </data>
+  <data name="Ngay_Ngay31" xml:space="preserve">
+    <value>Ngày 31</value>
+  </data>
+  <data name="Ngay_Ngay4" xml:space="preserve">
+    <value>Ngày 4</value>
+  </data>
+  <data name="Ngay_Ngay5" xml:space="preserve">
+    <value>Ngày 5</value>
+  </data>
+  <data name="Ngay_Ngay6" xml:space="preserve">
+    <value>Ngày 6</value>
+  </data>
+  <data name="Ngay_Ngay7" xml:space="preserve">
+    <value>Ngày 7</value>
+  </data>
+  <data name="Ngay_Ngay8" xml:space="preserve">
+    <value>Ngày 8</value>
+  </data>
+  <data name="Ngay_Ngay9" xml:space="preserve">
+    <value>Ngày 9</value>
+  </data>
+  <data name="PageSize_HAIMUOI" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="PageSize_HAINGHIN" xml:space="preserve">
+    <value>2.000</value>
+  </data>
+  <data name="PageSize_HAITRAMNGHIN" xml:space="preserve">
+    <value>200.000</value>
+  </data>
+  <data name="PageSize_HAITRIEU" xml:space="preserve">
+    <value>2.000.000</value>
+  </data>
+  <data name="PageSize_MOTNGHIN" xml:space="preserve">
+    <value>1.000</value>
+  </data>
+  <data name="PageSize_MOTTRAM" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="PageSize_MOTTRAMNGHIN" xml:space="preserve">
+    <value>100.000</value>
+  </data>
+  <data name="PageSize_MOTTRIEU" xml:space="preserve">
+    <value>1.000.000</value>
+  </data>
+  <data name="PageSize_MOTTRIEUNAMTRAMNGHIN" xml:space="preserve">
+    <value>1.500.000</value>
+  </data>
+  <data name="PageSize_MUOI" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="PageSize_MUOILAM" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="PageSize_NAM" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="PageSize_NAMMUOI" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="PageSize_NAMNGHIN" xml:space="preserve">
+    <value>5.000</value>
+  </data>
+  <data name="PageSize_NAMTRAM" xml:space="preserve">
+    <value>500</value>
+  </data>
+  <data name="PageSize_NAMTRAMNGHIN" xml:space="preserve">
+    <value>500.000</value>
+  </data>
+  <data name="PageSize_NOLIMIT" xml:space="preserve">
+    <value>No limit</value>
+  </data>
+  <data name="Thang_Thang1" xml:space="preserve">
+    <value>Tháng 1</value>
+  </data>
+  <data name="Thang_Thang10" xml:space="preserve">
+    <value>Tháng 10</value>
+  </data>
+  <data name="Thang_Thang11" xml:space="preserve">
+    <value>Tháng 11</value>
+  </data>
+  <data name="Thang_Thang12" xml:space="preserve">
+    <value>Tháng 12</value>
+  </data>
+  <data name="Thang_Thang2" xml:space="preserve">
+    <value>Tháng 2</value>
+  </data>
+  <data name="Thang_Thang3" xml:space="preserve">
+    <value>Tháng 3</value>
+  </data>
+  <data name="Thang_Thang4" xml:space="preserve">
+    <value>Tháng 4</value>
+  </data>
+  <data name="Thang_Thang5" xml:space="preserve">
+    <value>Tháng 5</value>
+  </data>
+  <data name="Thang_Thang6" xml:space="preserve">
+    <value>Tháng 6</value>
+  </data>
+  <data name="Thang_Thang7" xml:space="preserve">
+    <value>Tháng 7</value>
+  </data>
+  <data name="Thang_Thang8" xml:space="preserve">
+    <value>Tháng 8</value>
+  </data>
+  <data name="Thang_Thang9" xml:space="preserve">
+    <value>Tháng 9</value>
+  </data>
+  <data name="iSelectEmailOrSms_SendEmail" xml:space="preserve">
+    <value>Send Email API</value>
+  </data>
+  <data name="iSelectEmailOrSms_SendSms" xml:space="preserve">
+    <value>Send Sms API</value>
+  </data>
+  <data name="iSelectEmailOrSms_SendSmsByBatch" xml:space="preserve">
+    <value>Send Sms By Batch API</value>
+  </data>
+  <data name="iSelectEmailOrSms_SendSmsByTemplate" xml:space="preserve">
+    <value>Send Sms By Template API</value>
+  </data>
+  <data name="iSelectEmailOrSms_SendSmsToFirebase" xml:space="preserve">
+    <value>Send Sms To Firebase API</value>
+  </data>
+  <data name="iSelectEmailOrSms_SendSms_1" xml:space="preserve">
+    <value>Send Sms-1 API</value>
+  </data>
+  <data name="iOption_f8SendAPI_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="iOption_f8SendAPI_LoadData" xml:space="preserve">
+    <value>Load data</value>
+  </data>
+  <data name="iOption_f8SendAPI_None" xml:space="preserve">
+    <value>- None -</value>
+  </data>
+  <data name="iOption_f8SendAPI_SendEmail" xml:space="preserve">
+    <value>-- Send Email</value>
+  </data>
+  <data name="iOption_f8SendAPI_SendSms" xml:space="preserve">
+    <value>-- Send Sms</value>
+  </data>
+  <data name="iOption_f8SendAPI_SendSmsByBatch" xml:space="preserve">
+    <value>-- Send Sms By Batch</value>
+  </data>
+  <data name="iOption_f8SendAPI_SendSmsByTemplate" xml:space="preserve">
+    <value>-- Send Sms By Template</value>
+  </data>
+  <data name="iOption_f8SendAPI_SendSmsToFirebase" xml:space="preserve">
+    <value>-- Send Sms To Firebase</value>
+  </data>
+  <data name="iOption_f8SendAPI_SendSms_1" xml:space="preserve">
+    <value>-- Send Sms-1</value>
+  </data>
+  <data name="iOption_f8SendAPI_Sms" xml:space="preserve">
+    <value>Sms</value>
+  </data>
+  <data name="iOption_f8SendAPI_RunCUrl" xml:space="preserve">
+    <value>Run cURL</value>
+  </data>
+  <data name="iDaySelect_N14" xml:space="preserve">
+    <value>2 tuần</value>
+  </data>
+  <data name="iDaySelect_N30" xml:space="preserve">
+    <value>1 tháng</value>
+  </data>
+  <data name="iDaySelect_N45" xml:space="preserve">
+    <value>1,5 tháng</value>
+  </data>
+  <data name="iDaySelect_N60" xml:space="preserve">
+    <value>2 tháng</value>
+  </data>
+  <data name="iDaySelect_N7" xml:space="preserve">
+    <value>1 tuần</value>
+  </data>
+  <data name="iDaySelect_NHY" xml:space="preserve">
+    <value>6 tháng</value>
+  </data>
+  <data name="iDaySelect_NN" xml:space="preserve">
+    <value>--</value>
+  </data>
+  <data name="iDaySelect_N10Y" xml:space="preserve">
+    <value>10 năm</value>
+  </data>
+  <data name="iDaySelect_N1HY" xml:space="preserve">
+    <value>1,5 năm</value>
+  </data>
+  <data name="iDaySelect_N1Y" xml:space="preserve">
+    <value>1 năm</value>
+  </data>
+  <data name="iDaySelect_N20Y" xml:space="preserve">
+    <value>20 năm</value>
+  </data>
+  <data name="iDaySelect_N2Y" xml:space="preserve">
+    <value>2 năm</value>
+  </data>
+  <data name="iDaySelect_N30Y" xml:space="preserve">
+    <value>30 năm</value>
+  </data>
+  <data name="iDaySelect_N3Y" xml:space="preserve">
+    <value>3 năm</value>
+  </data>
+  <data name="iDaySelect_N50Y" xml:space="preserve">
+    <value>50 năm</value>
+  </data>
+  <data name="iDaySelect_N5Y" xml:space="preserve">
+    <value>5 năm</value>
+  </data>
+  <data name="iDaySelect_N1" xml:space="preserve">
+    <value>1 ngày</value>
+  </data>
+  <data name="iDaySelect_N2" xml:space="preserve">
+    <value>2 ngày</value>
+  </data>
+  <data name="iDaySelect_N3" xml:space="preserve">
+    <value>3 ngày</value>
+  </data>
+  <data name="iDaySelect_N5" xml:space="preserve">
+    <value>5 ngày</value>
+  </data>
+  <data name="if8SendAPI_Email_FileAttachDialog_Email" xml:space="preserve">
+    <value>mẫu Email</value>
+  </data>
+  <data name="if8SendAPI_Email_FileAttachDialog_Email_Active_HopDong" xml:space="preserve">
+    <value>-- Email Active Hợp đồng</value>
+  </data>
+  <data name="if8SendAPI_Email_FileAttachDialog_None" xml:space="preserve">
+    <value>--</value>
+  </data>
+  <data name="if8SendAPI_Email_FileAttachDialog_Sms" xml:space="preserve">
+    <value>mẫu Sms</value>
+  </data>
+  <data name="if8SendAPI_Email_FileAttachDialog_Sms_Active_HopDong" xml:space="preserve">
+    <value>-- Sms Active Hợp đồng</value>
+  </data>
+  <data name="if8SendAPI_Email_FileAttachDialog_Sms_DenHan" xml:space="preserve">
+    <value>-- Sms Hợp đồng đến hạn</value>
+  </data>
+</root>

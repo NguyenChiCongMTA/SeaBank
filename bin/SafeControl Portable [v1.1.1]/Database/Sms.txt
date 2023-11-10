@@ -1,0 +1,7 @@
+NOTI_ROUTING_API
+qmklfoni1ezxlf2ckpygpfx12152020
+http://10.9.70.237:8082/NOTIROUTING/rest/seab/process
+POST
+Application/Json
+8082 
+10.9.70.237
