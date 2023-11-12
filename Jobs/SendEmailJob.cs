@@ -64,6 +64,12 @@ where 1=1
             ";
 
             Base.Connect connect = new Base.Connect();
+
+            // Lấy ngày đến hạn chọn trừ đi (nhân với -1) số ngày trong vòng
+            DateTime fromDate = DateTime.Now.AddDays(-1 * jobConfig.Han);
+
+            sSql = string.Format(sSql, fromDate , DateTime.Now);
+
             connect.InitSqlConnection();
             var tbl = connect.GetSqlDataSet(sSql).Tables[0];
 

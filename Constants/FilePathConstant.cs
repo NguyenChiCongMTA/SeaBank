@@ -27,6 +27,7 @@ namespace SafeControl.Constants
         public const string TEMPLATE_SMS = @"\Templates\Sms";
 
         public const string JOB_CONFIG = @"\JobConfig\JobConfig.json";
+        public const string SOFTWARE_CONFIG = @"\Config\SoftwareConfig.json";
 
     }
 }

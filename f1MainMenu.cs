@@ -14,6 +14,8 @@ namespace SafeControl
         public f1MainMenu()
         {
             InitializeComponent();
+
+            
         }
         public string TenNhanVien { set; get; }
         public f0HomeLogin formLogin { set; get; }
@@ -25,6 +27,11 @@ namespace SafeControl
             mlNhanVien.Text = "Nhân viên: " + TenNhanVien;
             if (user == "admin")
                 mbtn_f7QuanLyTaiKhoan.Visible = true;
+            if(IsLimited())
+            {
+                this.Close();
+                formLogin.Show();
+            }    
         }
 
         private void fMainMenu_FormClosed(object sender, FormClosedEventArgs e)
@@ -39,12 +46,14 @@ namespace SafeControl
         /// <param name="e"></param>
         private void mpInHopDong_Click(object sender, EventArgs e)
         {
-            
-            f2InHopDong fm = new f2InHopDong();
-            fm.formMainMenu = this;
-            fm.TenNhanVien = TenNhanVien;
-            fm.MaChiNhanh = MaNganHang;
-            fm.Show();
+            if (!IsLimited())
+            {
+                f2InHopDong fm = new f2InHopDong();
+                fm.formMainMenu = this;
+                fm.TenNhanVien = TenNhanVien;
+                fm.MaChiNhanh = MaNganHang;
+                fm.Show();
+            }
         }
         
         /// <summary>
@@ -56,12 +65,15 @@ namespace SafeControl
         private void mbtn_f5BaoCaoHopDong_Click(object sender, EventArgs e)
         {
             //this.Hide();
+            if (!IsLimited())
+            {
 
-            f5BaoCaoHopDong fm = new f5BaoCaoHopDong();
-            fm.formMainMenu = this;
-            fm.TenNhanVien = TenNhanVien;
-            fm.MaNganHang = MaNganHang;
-            fm.Show();
+                f5BaoCaoHopDong fm = new f5BaoCaoHopDong();
+                fm.formMainMenu = this;
+                fm.TenNhanVien = TenNhanVien;
+                fm.MaNganHang = MaNganHang;
+                fm.Show();
+            }
         }
         /// <summary>
         /// Sự kiện mbtn_f3BaoCaoKet_Click
@@ -72,12 +84,15 @@ namespace SafeControl
         private void mbtn_f3BaoCaoKet_Click(object sender, EventArgs e)
         {
             //this.Hide();
+            if (!IsLimited())
+            {
 
-            f4BaoCaoTiLeSuDungKet fm = new f4BaoCaoTiLeSuDungKet();
-            fm.formMainMenu = this;
-            fm.TenNhanVien = TenNhanVien;
-            fm.MaNganHang = MaNganHang;
-            fm.Show();
+                f4BaoCaoTiLeSuDungKet fm = new f4BaoCaoTiLeSuDungKet();
+                fm.formMainMenu = this;
+                fm.TenNhanVien = TenNhanVien;
+                fm.MaNganHang = MaNganHang;
+                fm.Show();
+            }
         }
 
         /// <summary>
@@ -89,11 +104,14 @@ namespace SafeControl
         private void mbtn_f8SendAPI_Click(object sender, EventArgs e)
         {
             //this.Hide();
+            if (!IsLimited())
+            {
 
-            f8SendAPI fm = new f8SendAPI();
-            fm.formMainMenu = this;
-            fm.sTenNhanVien = TenNhanVien;
-            fm.Show();
+                f8SendAPI fm = new f8SendAPI();
+                fm.formMainMenu = this;
+                fm.sTenNhanVien = TenNhanVien;
+                fm.Show();
+            }
         }
         /// <summary>
         /// Sự kiện mbtn_f2BaoCaoDoanhThu_Click
@@ -102,12 +120,15 @@ namespace SafeControl
         private void mbtn_f2BaoCaoDoanhThu_Click(object sender, EventArgs e)
         {
             //this.Hide();
+            if (!IsLimited())
+            {
 
-            f3BaoCaoDoanhThu fm = new f3BaoCaoDoanhThu();
-            fm.formMainMenu = this;
-            fm.TenNhanVien = TenNhanVien;
-            fm.MaNganHang = MaNganHang;
-            fm.Show();
+                f3BaoCaoDoanhThu fm = new f3BaoCaoDoanhThu();
+                fm.formMainMenu = this;
+                fm.TenNhanVien = TenNhanVien;
+                fm.MaNganHang = MaNganHang;
+                fm.Show();
+            }
         }
         /// <summary>
         /// Sự kiện mbtn_f6GiaHanHopDong_Click
@@ -116,10 +137,13 @@ namespace SafeControl
         private void mbtn_f6GiaHanHopDong_Click(object sender, EventArgs e)
         {
             //this.Hide();
+            if (!IsLimited())
+            {
 
-            f6TuDongBaoGiaHan fm = new f6TuDongBaoGiaHan();
-            fm.formMainMenu = this;
-            fm.Show();
+                f6TuDongBaoGiaHan fm = new f6TuDongBaoGiaHan();
+                fm.formMainMenu = this;
+                fm.Show();
+            }
         }
         /// <summary>
         /// Sự kiện mbtn_f7QuanLyTaiKhoan_Click
@@ -128,12 +152,15 @@ namespace SafeControl
         private void mbtn_f7QuanLyTaiKhoan_Click(object sender, EventArgs e)
         {
             //this.Hide();
+            if (!IsLimited())
+            {
 
-            f7QuanLy fm = new f7QuanLy();
-            fm.formMainMenu = this;
-            fm.formMainMenu = this;
-            fm.TenNhanVien = TenNhanVien;
-            fm.Show();
+                f7QuanLy fm = new f7QuanLy();
+                fm.formMainMenu = this;
+                fm.formMainMenu = this;
+                fm.TenNhanVien = TenNhanVien;
+                fm.Show();
+            }
         }
         /// <summary>
         /// Sự kiện mbtn_f9LietKeGiaoDich_Click
@@ -142,11 +169,14 @@ namespace SafeControl
         private void mbtn_f9LietKeGiaoDich_Click(object sender, EventArgs e)
         {
             //this.Hide();
+            if (!IsLimited())
+            {
 
-            f9LietKeGiaoDich fm = new f9LietKeGiaoDich();
-            fm.formMainMenu = this;
-            fm.sTenNhanVien = TenNhanVien;
-            fm.Show();
+                f9LietKeGiaoDich fm = new f9LietKeGiaoDich();
+                fm.formMainMenu = this;
+                fm.sTenNhanVien = TenNhanVien;
+                fm.Show();
+            }
         }
     }
 }

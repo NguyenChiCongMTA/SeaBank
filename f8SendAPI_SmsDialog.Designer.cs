@@ -181,6 +181,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 458);
             this.Name = "f8SendAPI_SmsDialog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sms API";
             this.msc_Context.Panel2.ResumeLayout(false);
             this.msc_Context.Panel2.PerformLayout();

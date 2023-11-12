@@ -12,6 +12,8 @@ using SafeControl.Dictionary;
 using System.IO;
 using SafeControl.Base;
 using SafeControl.Bussiness;
+using Newtonsoft.Json;
+using SafeControl.Classes.JobConfig;
 
 namespace SafeControl
 {
@@ -19,6 +21,8 @@ namespace SafeControl
     {
         public fBase()
         {
+            
+
             InitializeComponent();
             //
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -32,7 +36,68 @@ namespace SafeControl
             this.Load += this.fBase_Load;
             mllRefreshDataBase.LinkClicked += mllRefreshDataBase_LinkClicked;
             mllPhienBan.LinkClicked += mllPhienBan_LinkClicked;
+
+             
+
         }
+
+        protected bool IsLimited()
+        {
+            int limitBoxConfig = GetLimitBoxConfig();
+            if (IsBoxNumberGreaterThan(limitBoxConfig))
+            {
+                MessageBox.Show("Đã vượt quá số box","Thông báo",  MessageBoxButtons.OK);
+                return true;
+            }
+            if (GetLimitTimeConfig() < DateTime.Now)
+            {
+                MessageBox.Show("Vượt quá thời gia quy định", "Thông báo", MessageBoxButtons.OK);
+                return true;
+            }
+            return false;
+        }
+
+        protected bool IsBoxNumberGreaterThan(int count)
+        {
+            Base.Connect connect = new Base.Connect();
+            connect.InitSqlConnection();
+            var tbl = connect.GetSqlDataSet("select count(*) from fach").Tables[0];
+            if ((tbl?.Rows.Count ?? 0) > 0)
+            {
+                var boxNumber = int.Parse(tbl.Rows[0][0].ToString());
+                return boxNumber > count;
+            }
+            return false;
+        }
+        protected int GetLimitBoxConfig()
+        {
+            int limitBoxConfig = 0;
+            string fileSoftwareConfig = $@"{Application.StartupPath}{Constants.FilePathConstant.SOFTWARE_CONFIG}";
+            if (File.Exists(fileSoftwareConfig))
+            {
+                string softwareConfigContent = File.ReadAllText(fileSoftwareConfig);
+
+                SoftwareConfig softwareConfig = JsonConvert.DeserializeObject<SoftwareConfig>(softwareConfigContent);
+                int.TryParse(MEncypt.Decrypt(softwareConfig.LimitBox, MGlobal.sKey, true), out limitBoxConfig);
+            }
+            return limitBoxConfig;
+        }
+
+        protected DateTime GetLimitTimeConfig()
+        {
+            DateTime limitTimeConfig = DateTime.Parse("1/1/2000 00:00:00");
+            string fileSoftwareConfig = $@"{Application.StartupPath}{Constants.FilePathConstant.SOFTWARE_CONFIG}";
+            if (File.Exists(fileSoftwareConfig))
+            {
+                string softwareConfigContent = File.ReadAllText(fileSoftwareConfig);
+
+                SoftwareConfig softwareConfig = JsonConvert.DeserializeObject<SoftwareConfig>(softwareConfigContent);
+
+                DateTime.TryParse(MEncypt.Decrypt(softwareConfig.LimitTime, MGlobal.sKey , true) , out limitTimeConfig);
+            }
+            return limitTimeConfig;
+        }
+
         /////////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////////
         #region Declare

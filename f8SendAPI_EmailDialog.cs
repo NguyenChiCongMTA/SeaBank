@@ -97,7 +97,7 @@ namespace SafeControl
                 //
             }
             else
-                MMessageBox.Information("Có lỗi: " + response.StatusDescription + "\n---------\n" + response.Content);
+                MMessageBox.Information("Có lỗi: " + response.StatusDescription + "\n---------\n" + response.Content + "," + response.ErrorMessage);
             //
         }
         /// <summary>
@@ -183,8 +183,10 @@ namespace SafeControl
         /// </summary>
         public override void Command_ChapNhan()
         {
+            
             // Add code here:
             base.Command_ChapNhan();
+            if (string.IsNullOrEmpty(utility_paramlist_bodym.Text)) return;
             //
             sTemp_BodyCurl = Command_GenSendAPI_Email();
             //

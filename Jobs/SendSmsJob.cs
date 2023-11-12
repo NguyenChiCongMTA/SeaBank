@@ -43,29 +43,33 @@ person.telefon as ssdt,
 fach.vermietungsdatum as dngaymo,
 fach.laufzeit as dngayhethan
 from kundfach, person, fach
-where 1=1";
-            //and kundfach.personid = person.id
-            //and kundfach.fachid = fach.id
-            //and fach.vermietungsdatum is not null
-            //and fach.laufzeit is not null
-            //and kundfach.loeschdatum is null
-            //and fach.mandat_id is not null
-            //and fach.mandat_id != ''
-            //and
-            //(
-            //    ('{0}' = '')
-            //    OR
-            //    ('{1}' = '')
-            //    OR
-            //    (
-            //        (fach.laufzeit >= cast('{0:yyyy-MM-dd}' as date))
-            //        AND
-            //        (fach.laufzeit <= cast('{1:yyyy-MM-dd}' as date))
-            //    )
-            //)
-            //";
+where 1=1
+            and kundfach.personid = person.id
+            and kundfach.fachid = fach.id
+            and fach.vermietungsdatum is not null
+            and fach.laufzeit is not null
+            and kundfach.loeschdatum is null
+            and fach.mandat_id is not null
+            and fach.mandat_id != ''
+            and
+            (
+                ('{0}' = '')
+                OR
+                ('{1}' = '')
+                OR
+                (
+                    (fach.laufzeit >= cast('{0:yyyy-MM-dd}' as date))
+                    AND
+                    (fach.laufzeit <= cast('{1:yyyy-MM-dd}' as date))
+                )
+            )
+            ";
 
             Base.Connect connect = new Base.Connect();
+
+            DateTime fromDate = DateTime.Now.AddDays(-1 * jobConfig.Han);
+            sSql = string.Format(sSql, fromDate, DateTime.Now);
+
             connect.InitSqlConnection();
             var tbl = connect.GetSqlDataSet(sSql).Tables[0];
 
@@ -78,12 +82,18 @@ where 1=1";
                     DateTime dNgayKetThucBox = DateTime.Now;
                     GetNgayPhatHanhVaKetThucBox(row["ifachid"].ToString(), ref dNgayPhatHanhBox, ref dNgayKetThucBox);
 
-                    if (smsFile.Contains("Active"))
+
+                    Dictionary<string, string> replacements = new Dictionary<string, string>(){
+                        {"{HoTen}", row["sten"].ToString()},
+                        {"{SoKet}", row["ifachid"].ToString()},
+                        {"{HotLine}", jobConfig.SmsJobs[0].HotLine},
+                        {"{NgayKetThuc}",dNgayKetThucBox.ToString("dd/MM/yyyy") },
+                    };
+
+                    foreach (string key in replacements.Keys)
                     {
-                        smsContent = string.Format(smsContent, row["ifachid"], dNgayPhatHanhBox);
+                        sMau = sMau.Replace(key, replacements[key]);
                     }
-                    else
-                        smsContent = string.Format(smsContent, row["ifachid"],dNgayKetThucBox, jobConfig.SmsJobs[0].HotLine);
 
                     // header
                     SendAPI_Sms_header oSendAPI_Sms_header = new SendAPI_Sms_header(

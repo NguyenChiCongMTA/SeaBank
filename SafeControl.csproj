@@ -229,6 +229,7 @@
     <Compile Include="Classes\JobConfig\JobConfig.cs" />
     <Compile Include="Classes\JobConfig\EmailJobItem.cs" />
     <Compile Include="Classes\JobConfig\SmsJobItem.cs" />
+    <Compile Include="Classes\JobConfig\SoftwareConfig.cs" />
     <Compile Include="Classes\NotificationSystem.cs" />
     <Compile Include="Classes\SmsNotifierFactory.cs" />
     <Compile Include="Classes\EmailNotifierFactory.cs" />
@@ -1129,7 +1130,6 @@
     <EmbeddedResource Include="MComponent\MWaitForm.resx">
       <DependentUpon>MWaitForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -1149,11 +1149,13 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="Config\SoftwareConfig.json" />
     <None Include="JobConfig\JobConfig.json" />
     <None Include="job_scheduling_data_2_0.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\licenses.licx.bak" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

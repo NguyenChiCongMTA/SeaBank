@@ -14,6 +14,8 @@ using System.IO;
 using SafeControl.Base;
 using System.Net.NetworkInformation;
 using SafeControl.Dictionary;
+using Quartz.Impl;
+using Quartz;
 
 namespace SafeControl
 {
@@ -216,16 +218,17 @@ namespace SafeControl
                     //
                     if (list_mac.Contains(MAC_encrypt))
                     {
-                        if (!CheckBoxNumber())
-                        {
-                            this.DangNhap();
-                            check = 1;
-                        }
+                        this.DangNhap();
+                        check = 1;
                         break;
                     }
                 }
                 if (check == 0)
+                {
+                    MessageBox.Show("Thiết bị của bạn chưa được phép sử dụng","Thông báo", MessageBoxButtons.OK);
                     this.Close();
+                }
+                    
             }
             catch (Exception ex)
             {
@@ -233,18 +236,7 @@ namespace SafeControl
             }
             
         }
-        private bool CheckBoxNumber()
-        {
-            Base.Connect connect = new Base.Connect();
-            connect.InitSqlConnection();
-            var tbl = connect.GetSqlDataSet("select count(*) from fach").Tables[0];
-            if((tbl?.Rows.Count ?? 0) > 0 )
-            {
-                var boxNumber = int.Parse(tbl.Rows[0][0].ToString());
-                return boxNumber > 2000;
-            }
-            return false;
-        }
+        
         private void fHomeLogin_Load(object sender, EventArgs e)
         {
             LoadUser();
@@ -252,6 +244,9 @@ namespace SafeControl
 
         private void fHomeLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
+            StdSchedulerFactory factory = new StdSchedulerFactory();
+            IScheduler scheduler = factory.GetScheduler();
+            scheduler?.Shutdown();
             Application.Exit();
         }
     }
