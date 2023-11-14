@@ -1,0 +1,40 @@
+curl --request POST 'http://10.9.70.237:8082/NOTIROUTING/rest/seab/process'
+--header 'Content-Type: application/json' 
+--data-raw '
+{
+    "header": {
+        "reqType": "REQUEST",
+        "api": "NOTI_ROUTING_API",
+        "apiKey": "qmklfoni1ezxlf2ckpygpfx12152020",
+        "channel": "T24",
+        "subChannel": "ODS",
+        "location": "123.24.47.24",
+        "context": "Mozilla/5.0(WindowsNT10.0)",
+        "trusted": "false",
+        "requestAPI": "T24",
+        "requestNode": "1",
+        "duration": 0,
+        "priority": 1,
+        "userID": "dap.dv",
+       "synasyn": "true"
+    },
+
+    "body": {
+        "command": "SendSms",
+        "utility": {
+            "user_id": "0779310779",
+            "is_update": 0,
+            "branch_name": "SeABank",
+            "service_id": "SeABank",
+            "channel": "SMS",
+            "co_code": "VN0010002",
+            "job": "AUTH_SMS_OUT",
+            "notify_key": "",
+            "key": "AUTH-1-1594416001-17032022100459",
+            "content": "12345 test"
+        }
+
+    }
+
+}
+'           

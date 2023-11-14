@@ -94,6 +94,12 @@ namespace SafeControl
                 MMessageBox.Information("Đã gửi mail thành công!");
                 // Ghi lại lịch sử
                 oPersonHistory.AddPersonHistoryLog(DateTime.Now, sTenNhanVien, "Email", string.Format("Chủ đề: {0}\nNội dung:\n{1}", utility_paramlist_subject.Text, utility_paramlist_bodym.Text));
+                using (StreamWriter sWrite = new StreamWriter(Application.StartupPath + Constants.FilePathConstant.Hotline, false))
+                {
+                    string sTemp = string.Format("{0}", mtb_hotline.Text);                  
+                    sWrite.Write(sTemp);
+                    sWrite.Close();
+                }
                 //
             }
             else
@@ -210,6 +216,16 @@ namespace SafeControl
             var list = directoryInfo.GetFiles().Select(x => x.Name).ToList();
             list.Insert(0, "Chọn mẫu");
             this.mcb_if8SendAPI_Email_FileAttachDialog.DataSource = list;
+            using (StreamReader sRead = new StreamReader(Application.StartupPath + Constants.FilePathConstant.Hotline))
+            {
+                string StrRead = sRead.ReadToEnd().Trim();                sRead.Close();
+                if (StrRead.Trim() != "")
+                {
+                    string[] tempRead = StrRead.Split('\n');
+                    mtb_hotline.Text = tempRead[0].Trim();
+                }
+
+            }
         }
         /// <summary>
         /// Khởi tạo InitData

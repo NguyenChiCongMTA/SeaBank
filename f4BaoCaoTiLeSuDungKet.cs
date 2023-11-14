@@ -124,10 +124,7 @@ namespace SafeControl
             return tenchinhanh;
         }
         public int check_contact = 0;
-        app_object.Obj_LoaiBox LoaiBox_1 = new app_object.Obj_LoaiBox();
-        app_object.Obj_LoaiBox LoaiBox_2 = new app_object.Obj_LoaiBox();
-        app_object.Obj_LoaiBox LoaiBox_3 = new app_object.Obj_LoaiBox();
-
+        
         private void mbtn_ThongKe_Click_1(object sender, EventArgs e)
         {
             
@@ -171,8 +168,8 @@ namespace SafeControl
                 tong = new List<int>();
                 controng = new List<int>();
                 DataTable dt = new DataTable();
-                int[] loaibox = { 50, 100, 200 };
-                string[] loaibox_ = { "50*300*400", "100*300*400", "200*300*400" };
+                int[] loaibox = { 50, 100, 150, 200, 300 };
+                string[] loaibox_ = { "50*300*400", "100*300*400", "150*300*400", "200*300*400", "300*300*400"};
                 for (int i = 0; i < loaibox.Length; i++)
                 {
                     sql = string.Format(sql_sudung, loaibox[i], thoigianbatdau);
@@ -282,7 +279,7 @@ namespace SafeControl
                     }
                 }
             }
-            object oTempPath = Application.StartupPath + @"\template\3_Bao_cao_ti_le_su_dung_ket.dot";
+            object oTempPath = Application.StartupPath + @"\template\3_Bao_cao_ti_le_su_dung_ket_1.dot";
 
             object missing = Missing.Value;
 
@@ -369,6 +366,38 @@ namespace SafeControl
                         case "TongLoai3":
                             myMergeField.Select();
                             word.Selection.TypeText(tong[2].ToString());
+                            break;
+                        case "SuDungLoai4":
+                            myMergeField.Select();
+                            word.Selection.TypeText(suddung[3].ToString());
+                            break;
+                        case "TrongLoai4":
+                            myMergeField.Select();
+                            word.Selection.TypeText(controng[3].ToString());
+                            break;
+                        case "DatTruocLoai4":
+                            myMergeField.Select();
+                            word.Selection.TypeText(dattruoc[3].ToString());
+                            break;
+                        case "TongLoai4":
+                            myMergeField.Select();
+                            word.Selection.TypeText(tong[3].ToString());
+                            break;
+                        case "SuDungLoai5":
+                            myMergeField.Select();
+                            word.Selection.TypeText(suddung[4].ToString());
+                            break;
+                        case "TrongLoai5":
+                            myMergeField.Select();
+                            word.Selection.TypeText(controng[4].ToString());
+                            break;
+                        case "DatTruocLoai5":
+                            myMergeField.Select();
+                            word.Selection.TypeText(dattruoc[4].ToString());
+                            break;
+                        case "TongLoai5":
+                            myMergeField.Select();
+                            word.Selection.TypeText(tong[4].ToString());
                             break;
                         case "KiemSoat":
                             myMergeField.Select();

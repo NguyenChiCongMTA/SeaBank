@@ -183,6 +183,14 @@ namespace SafeControl
                             myMergeField.Select();
                             word.Selection.TypeText(Number_box(LoaiBox_3, mde_NgayBatDau.DateTime, mde_NgayKetthuc.DateTime, 0, 0).ToString());
                             break;
+                        case "Loai4Active":
+                            myMergeField.Select();
+                            word.Selection.TypeText(Number_box(LoaiBox_4, mde_NgayBatDau.DateTime, mde_NgayKetthuc.DateTime, 0, 0).ToString());
+                            break;
+                        case "Loai5Active":
+                            myMergeField.Select();
+                            word.Selection.TypeText(Number_box(LoaiBox_5, mde_NgayBatDau.DateTime, mde_NgayKetthuc.DateTime, 0, 0).ToString());
+                            break;
                         case "Loai1InActive":
                             myMergeField.Select();
                             word.Selection.TypeText(Number_box(LoaiBox_1, mde_NgayBatDau.DateTime, mde_NgayKetthuc.DateTime,1, 0).ToString());
@@ -194,6 +202,14 @@ namespace SafeControl
                         case "Loai3InActive":
                             myMergeField.Select();
                             word.Selection.TypeText(Number_box(LoaiBox_3, mde_NgayBatDau.DateTime, mde_NgayKetthuc.DateTime, 1, 0).ToString());
+                            break;
+                        case "Loai4InActive":
+                            myMergeField.Select();
+                            word.Selection.TypeText(Number_box(LoaiBox_4, mde_NgayBatDau.DateTime, mde_NgayKetthuc.DateTime, 1, 0).ToString());
+                            break;
+                        case "Loai5InActive":
+                            myMergeField.Select();
+                            word.Selection.TypeText(Number_box(LoaiBox_5, mde_NgayBatDau.DateTime, mde_NgayKetthuc.DateTime, 1, 0).ToString());
                             break;
                         case "KiemSoat":
                             myMergeField.Select();
@@ -239,6 +255,8 @@ namespace SafeControl
         app_object.Obj_LoaiBox LoaiBox_1 = new app_object.Obj_LoaiBox();
         app_object.Obj_LoaiBox LoaiBox_2 = new app_object.Obj_LoaiBox();
         app_object.Obj_LoaiBox LoaiBox_3 = new app_object.Obj_LoaiBox();
+        app_object.Obj_LoaiBox LoaiBox_4 = new app_object.Obj_LoaiBox();
+        app_object.Obj_LoaiBox LoaiBox_5 = new app_object.Obj_LoaiBox();
         //public string machinhanh = "VA210331";  
         private void f5BaoCaoHopDong_Load(object sender, EventArgs e)
         {
@@ -271,7 +289,9 @@ namespace SafeControl
 
             LoaiBox_1.width = 50; LoaiBox_1.height = 300; LoaiBox_1.depth = 400;
             LoaiBox_2.width = 100; LoaiBox_2.height = 300; LoaiBox_2.depth = 400;
-            LoaiBox_3.width = 200; LoaiBox_3.height = 300; LoaiBox_3.depth = 400;
+            LoaiBox_3.width = 150; LoaiBox_3.height = 300; LoaiBox_3.depth = 400;
+            LoaiBox_4.width = 200; LoaiBox_4.height = 300; LoaiBox_4.depth = 400;
+            LoaiBox_5.width = 300; LoaiBox_5.height = 300; LoaiBox_5.depth = 400;
             // date time
             mde_NgayBatDau.EditValue = DateTime.Today;
             mde_NgayKetthuc.EditValue = DateTime.Today;
@@ -350,9 +370,13 @@ namespace SafeControl
             if (mcb_LoaiBox.Text.Trim() == "50x300x400")
                 box.width = 50; 
             if (mcb_LoaiBox.Text.Trim() == "100x300x400")
-                box.width = 100; 
+                box.width = 100;
+            if (mcb_LoaiBox.Text.Trim() == "150x300x400")
+                box.width = 150;
             if (mcb_LoaiBox.Text.Trim() == "200x300x400")
                 box.width = 200;
+            if (mcb_LoaiBox.Text.Trim() == "300x300x400")
+                box.width = 300;
             if (mcb_LoaiBox.Text.Trim() == "Tất cả")
                 box.width = 0;
             if (mcb_LoaiHopDong.Text == "Tất cả")

@@ -93,6 +93,12 @@ namespace SafeControl
                 //
                 oPersonHistory.AddPersonHistoryLog(DateTime.Now, sTenNhanVien, "Sms", string.Format("Số điện thoại: {0}\nNội dung:\n{1}", user_id.Text, content.Text));
                 // Kết thúc
+                using (StreamWriter sWrite = new StreamWriter(Application.StartupPath + Constants.FilePathConstant.Hotline, false))
+                {
+                    string sTemp = string.Format("{0}", mtb_hotline.Text);
+                    sWrite.Write(sTemp);
+                    sWrite.Close();
+                }
             }
             else
                 MMessageBox.Information("Có lỗi: " + response.StatusDescription + "\n---------\n" + response.Content + "," + response.ErrorMessage);
@@ -234,6 +240,17 @@ namespace SafeControl
             this.mcb_if8SendAPI_Sms_FileAttachDialog.DataSource = directoryInfo.GetFiles().Select(x => x.Name).ToList();
 
             //
+            using (StreamReader sRead = new StreamReader(Application.StartupPath + Constants.FilePathConstant.Hotline))
+            {
+                string StrRead = sRead.ReadToEnd().Trim();
+                sRead.Close();
+                if (StrRead.Trim() != "")
+                {
+                    string[] tempRead = StrRead.Split('\n');
+                    mtb_hotline.Text = tempRead[0].Trim();
+                }
+
+            }
         }
         /// <summary>
         /// Khởi tạo InitData

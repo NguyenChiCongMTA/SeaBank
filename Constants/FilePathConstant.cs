@@ -13,6 +13,7 @@ namespace SafeControl.Constants
         public const string DATABASE_CONNECT = @"/Database/Connect.txt";
         public const string DATABASE_COPY_DATABASE_CONFIG = @"/Database/CopyDataBaseConfig.txt";
         public const string DATABASE_USER = @"/Database/rUser.txt";
+        public const string Hotline = @"/Database/hotline.txt";
         public const string DATABASE_INFO_BANK = @"/Database/InfoBank.txt";
         public const string DATABASE_HISTORY_CONFIG = @"/Database/HistoryConfig.txt";
         public const string DATABASE_PERMISSION_CONFIG = @"/Database/PermissionConfig.txt";

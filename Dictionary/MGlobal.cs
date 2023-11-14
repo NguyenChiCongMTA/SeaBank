@@ -18,7 +18,7 @@ namespace SafeControl.Dictionary
     public class MGlobal : MBase
     {
         public static string sSkinName = "Office 2013"; // Giao diện
-        public static string sPhienBan = "[v1.0.5]"; // Phiên bản
+        public static string sPhienBan = "[v2.3.7]"; // Phiên bản
         public static string sCultureInfoName = "vi"; // Ngôn ngữ
         public static Font fDefaultFont = new Font("Segoe UI", 8.25F); // Font hệ thống
         public static int iWINWORD = 30;

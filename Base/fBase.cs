@@ -36,9 +36,6 @@ namespace SafeControl
             this.Load += this.fBase_Load;
             mllRefreshDataBase.LinkClicked += mllRefreshDataBase_LinkClicked;
             mllPhienBan.LinkClicked += mllPhienBan_LinkClicked;
-
-             
-
         }
 
         protected bool IsLimited()
@@ -178,11 +175,11 @@ namespace SafeControl
             // Kiểm tra quyền đăng nhập
             // EditBy: truongnm 06.04.2022
             ///////////////////////////////////////////
-            if (!IsPersonPermisstion(this.Name, GetUser()))
-            {
-                MMessageBox.Error("Bạn không có quyền truy cập vào chức năng này!");
-                this.Dispose();
-            }
+            //if (!IsPersonPermisstion(this.Name, GetUser()))
+            //{
+            //    MMessageBox.Error("Bạn không có quyền truy cập vào chức năng này!");
+            //    this.Dispose();
+            //}
         }
         /// <summary>
         /// Hàm LoadData

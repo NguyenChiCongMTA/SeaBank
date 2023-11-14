@@ -157,7 +157,6 @@
             this.utility_paramlist_subject.sColumnName = null;
             this.utility_paramlist_subject.Size = new System.Drawing.Size(352, 22);
             this.utility_paramlist_subject.TabIndex = 10;
-            this.utility_paramlist_subject.Text = "Test";
             this.utility_paramlist_subject.Leave += new System.EventHandler(this.mcb_if8SendAPI_Email_FileAttachDialog_SelectedIndexChanged);
             // 
             // mLabel1
@@ -307,7 +306,6 @@
             this.mtb_hotline.sColumnName = null;
             this.mtb_hotline.Size = new System.Drawing.Size(352, 22);
             this.mtb_hotline.TabIndex = 11;
-            this.mtb_hotline.Text = "0123456789";
             this.mtb_hotline.Leave += new System.EventHandler(this.mcb_if8SendAPI_Email_FileAttachDialog_SelectedIndexChanged);
             // 
             // txtMaDoanhNghiep

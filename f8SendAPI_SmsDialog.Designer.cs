@@ -162,7 +162,6 @@
             this.mtb_hotline.sColumnName = null;
             this.mtb_hotline.Size = new System.Drawing.Size(365, 22);
             this.mtb_hotline.TabIndex = 38;
-            this.mtb_hotline.Text = "0123456789";
             this.mtb_hotline.Leave += new System.EventHandler(this.mcb_if8SendAPI_Sms_FileAttachDialog_SelectedIndexChanged);
             // 
             // user_id

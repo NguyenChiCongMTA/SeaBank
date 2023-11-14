@@ -1,0 +1,21 @@
+﻿
+Ngân hàng TMCP Đông Nam Á (SeABank) xin gửi tới Quý Khách hàng lời chào trân trọng và cảm ơn Quý Khách hàng đã tin tưởng, sử dụng dịch vụ cho thuê tủ két an toàn của SeABank trong thời gian qua.
+THÔNG BÁO GIA HẠN HỢP ĐỒNG CHO THUÊ TỦ KÉT AN TOÀN
+
+Kính gửi Quý khách:
+-	Ông/Bà {HoTen}
+-	Địa chỉ: {DiaChi}
+-	Điện thoại: {SoDienThoai}
+-	Số CMND/Hộ chiếu/Thẻ CCCD: {SoCCCD} 
+Ngày cấp: {NgayCapCCCD} - Nơi cấp: {NoiCapCCCD}
+-	Email: {Email}
+-	Số tài khoản mở tại SeABank: {SoTaiKhoan}
+SeABank xin trân trọng thông báo, theo thỏa thuận tại Hợp đồng cho thuê tủ két an toàn số {SoKet} ngày {NgayPhatHanh} (Sau đây gọi là “Hợp đồng”), thời hạn thuê tủ két theo Hợp đồng của Quý Khách hàng sẽ kết thúc vào ngày {NgayKetThuc}. 
+Trường hợp Quý Khách hàng có nhu cầu gia hạn Hợp đồng, Quý Khách hàng vui lòng đến điểm giao dịch của SeABank nơi Quý Khách hàng thuê tủ két để thực hiện thủ tục gia hạn hoặc sử dụng email Quý Khách hàng đã đăng ký tại Hợp đồng ({SoHopDong}) để gửi email tới địa chỉ: {EmailSeaBank}@seabank.com.vn xác nhận về việc đồng ý gia hạn Hợp đồng.
+Khi Quý Khách hàng xác nhận đồng ý gia hạn Hợp đồng, Hợp đồng của Quý Khách hàng sẽ được gia hạn theo quy định như sau:
+-	Thời gian gia hạn: bằng với thời gian thuê được quy định tại Hợp đồng. 
+-	Thời điểm bắt đầu tính thời gian gia hạn: từ ngày tiếp theo ngày kết thúc thời hạn thuê được quy định tại Hợp đồng.
+-	Mức phí cho thuê áp dụng với thời gian gia hạn: {PhiGiaHan} đồng (Bằng chữ: {PhiGiaHanBangChu}).
+-	Các điều khoản, nội dung khác liên quan đến việc thuê tủ két thực hiện theo quy định tại Hợp đồng đã ký.
+
+Trân trọng!

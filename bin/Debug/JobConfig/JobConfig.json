@@ -2,7 +2,7 @@
   "smsjobs": [
     {
       /*smstime :  Thời điểm gửi sms*/
-      "smstime": "16:23:00",
+      "smstime": "10:32:00",
       "smstemplate": "Sms Hợp đồng đến hạn",
       "hotline": "0123456"
     }
